@@ -81,4 +81,7 @@
 		</pluginManagement>
 	</build>
 
+	<modules>
+		<module>superfinn-math</module>
+	</modules>
 </project>
