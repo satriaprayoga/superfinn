@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>superfinn</groupId>
+	<artifactId>superfinn</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+
+	<properties>
+		<version.java>1.7</version.java>
+		<version.junit>4.11</version.junit>
+		<version.xmlunit>1.4</version.xmlunit>
+		<version.mockito>1.9.5</version.mockito>
+
+		<version.maven.jar.plugin>2.4</version.maven.jar.plugin>
+
+		<version.maven.processor.plugin>2.1.0</version.maven.processor.plugin>
+		<version.maven.compiler.plugin>2.5.1</version.maven.compiler.plugin>
+
+		<version.maven.exec.plugin>1.2.1</version.maven.exec.plugin>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+	</dependencies>
+	
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven.compiler.plugin}</version>
+				<inherited>true</inherited>
+				<configuration>
+					<source>${version.java}</source>
+					<target>${version.java}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+
+
+				<!-- Codehaus -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>${version.maven.exec.plugin}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>java</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
