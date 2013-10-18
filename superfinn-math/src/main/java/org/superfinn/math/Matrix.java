@@ -37,6 +37,10 @@ public class Matrix implements Cloneable,Serializable{
 		}
 	}
 	
+	public Matrix(final int rows, final int cols) {
+		this.matrix = new double[rows][cols];
+	}
+	
 	public static Matrix createColumnMatrix(final double [] input){
 		final double [][] m=new double[input.length][1];
 		for(int i=0;i<m.length;i++){

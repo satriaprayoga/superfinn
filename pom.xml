@@ -83,5 +83,6 @@
 
 	<modules>
 		<module>superfinn-math</module>
+		<module>superfinn-net</module>
 	</modules>
 </project>
